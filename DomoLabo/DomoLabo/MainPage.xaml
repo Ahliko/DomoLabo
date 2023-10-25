@@ -1,14 +1,100 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:DomoLabo"
-             x:Class="DomoLabo.MainPage">
+<ContentPage
+    Background="#252840"
+    x:Class="DomoLabo.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:local="clr-namespace:DomoLabo"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
     <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+        <StackLayout Margin="40,80">
+            <Label FontSize="18" TextColor="DarkGray">Welcome</Label>
+            <Label
+                FontAttributes="Bold"
+                FontSize="30"
+                Margin="0"
+                TextColor="White">
+                Username
+            </Label>
+            <Label
+                FontAttributes="Bold"
+                FontSize="10"
+                TextColor="DarkGray">
+                100 devices connected
+            </Label>
+        </StackLayout>
+
+        <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
+            <Label FontAttributes="Bold" TextColor="White">Room</Label>
+        </StackLayout>
+        <StackLayout Margin="25,5">
+            <Label
+                FontAttributes="Bold"
+                FontSize="12"
+                TextColor="DarkGray">
+                Favorite devices
+            </Label>
+            <StackLayout Orientation="Horizontal">
+                <StackLayout Orientation="Vertical">
+                    <Frame
+                        Background="#3B3D51"
+                        CornerRadius="10"
+                        HeightRequest="65"
+                        Margin="2"
+                        Padding="10"
+                        WidthRequest="138">
+                        <StackLayout>
+                            <Label TextColor="White">test</Label>
+                        </StackLayout>
+                    </Frame>
+                    <Frame
+                        Background="#3B3D51"
+                        CornerRadius="10"
+                        HeightRequest="65"
+                        Margin="2"
+                        Padding="10"
+                        WidthRequest="138">
+                        <StackLayout>
+                            <Label TextColor="White">test</Label>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+
+
+        <StackLayout Margin="25,5">
+            <Label
+                FontAttributes="Bold"
+                FontSize="12"
+                TextColor="DarkGray">
+                Devices groups
+            </Label>
+            <StackLayout Orientation="Horizontal">
+                <Frame
+                    Background="#3B3D51"
+                    CornerRadius="10"
+                    HeightRequest="160"
+                    Margin="2"
+                    Padding="10"
+                    WidthRequest="138">
+                    <StackLayout>
+                        <Label TextColor="White">test</Label>
+                    </StackLayout>
+                </Frame>
+                <Frame
+                    Background="#3B3D51"
+                    CornerRadius="10"
+                    HeightRequest="160"
+                    Margin="2"
+                    Padding="10"
+                    WidthRequest="138">
+                    <StackLayout>
+                        <Label TextColor="White">test</Label>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </StackLayout>
     </StackLayout>
 
 </ContentPage>

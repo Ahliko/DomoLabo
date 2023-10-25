@@ -16,6 +16,9 @@ namespace DomoLabo.Droid
         {
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
+            
+            Window.AddFlags(WindowManagerFlags.Fullscreen);  
+            Window.ClearFlags(WindowManagerFlags.ForceNotFullscreen);
 
             base.OnCreate(savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);

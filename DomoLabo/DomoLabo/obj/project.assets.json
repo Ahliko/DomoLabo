@@ -527,11 +527,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Mes Dossiers\\Ynov Campus\\Ydays\\B2\\Domolabo\\DomoLabo\\DomoLabo\\DomoLabo.csproj",
+      "projectUniqueName": "C:\\Mes Dossiers\\Ynov Campus\\Ydays\\B2\\Domolabo\\test\\DomoLabo\\DomoLabo\\DomoLabo\\DomoLabo.csproj",
       "projectName": "DomoLabo",
-      "projectPath": "C:\\Mes Dossiers\\Ynov Campus\\Ydays\\B2\\Domolabo\\DomoLabo\\DomoLabo\\DomoLabo.csproj",
+      "projectPath": "C:\\Mes Dossiers\\Ynov Campus\\Ydays\\B2\\Domolabo\\test\\DomoLabo\\DomoLabo\\DomoLabo\\DomoLabo.csproj",
       "packagesPath": "C:\\Users\\macel\\.nuget\\packages\\",
-      "outputPath": "C:\\Mes Dossiers\\Ynov Campus\\Ydays\\B2\\Domolabo\\DomoLabo\\DomoLabo\\obj\\",
+      "outputPath": "C:\\Mes Dossiers\\Ynov Campus\\Ydays\\B2\\Domolabo\\test\\DomoLabo\\DomoLabo\\DomoLabo\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\macel\\AppData\\Roaming\\NuGet\\NuGet.Config",

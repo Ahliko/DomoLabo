@@ -1895,11 +1895,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Mes Dossiers\\Ynov Campus\\Ydays\\B2\\Domolabo\\DomoLabo\\DomoLabo.Droid\\DomoLabo.Droid.csproj",
+      "projectUniqueName": "C:\\Mes Dossiers\\Ynov Campus\\Ydays\\B2\\Domolabo\\test\\DomoLabo\\DomoLabo\\DomoLabo.Droid\\DomoLabo.Droid.csproj",
       "projectName": "DomoLabo.Droid",
-      "projectPath": "C:\\Mes Dossiers\\Ynov Campus\\Ydays\\B2\\Domolabo\\DomoLabo\\DomoLabo.Droid\\DomoLabo.Droid.csproj",
+      "projectPath": "C:\\Mes Dossiers\\Ynov Campus\\Ydays\\B2\\Domolabo\\test\\DomoLabo\\DomoLabo\\DomoLabo.Droid\\DomoLabo.Droid.csproj",
       "packagesPath": "C:\\Users\\macel\\.nuget\\packages\\",
-      "outputPath": "C:\\Mes Dossiers\\Ynov Campus\\Ydays\\B2\\Domolabo\\DomoLabo\\DomoLabo.Droid\\obj\\",
+      "outputPath": "C:\\Mes Dossiers\\Ynov Campus\\Ydays\\B2\\Domolabo\\test\\DomoLabo\\DomoLabo\\DomoLabo.Droid\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
@@ -1916,8 +1916,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "C:\\Mes Dossiers\\Ynov Campus\\Ydays\\B2\\Domolabo\\DomoLabo\\DomoLabo\\DomoLabo.csproj": {
-              "projectPath": "C:\\Mes Dossiers\\Ynov Campus\\Ydays\\B2\\Domolabo\\DomoLabo\\DomoLabo\\DomoLabo.csproj"
+            "C:\\Mes Dossiers\\Ynov Campus\\Ydays\\B2\\Domolabo\\test\\DomoLabo\\DomoLabo\\DomoLabo\\DomoLabo.csproj": {
+              "projectPath": "C:\\Mes Dossiers\\Ynov Campus\\Ydays\\B2\\Domolabo\\test\\DomoLabo\\DomoLabo\\DomoLabo\\DomoLabo.csproj"
             }
           }
         }

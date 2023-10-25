@@ -11,7 +11,6 @@ namespace DomoLabo
         public App()
         {
             InitializeComponent();
-
             MainPage = new MainPage();
         }
 

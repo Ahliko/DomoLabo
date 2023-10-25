@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pR+gdsgfz0040FmuEAWvIA8tu5hwxXLprjPQX7EesYkIoLOl4nx58iYs9ZhhpngGHneVEw1DUpfJblWrOx2EMA==",
+  "dgSpecHash": "2L6wuIL50xNu6cjqe/gDEuzascJ9Ydo9lwLCFym/VJ7HiPu6hWhpaWINfNyyRTW7GrhorSPnIwCnctFWbXOxOw==",
   "success": true,
-  "projectFilePath": "C:\\Mes Dossiers\\Ynov Campus\\Ydays\\B2\\Domolabo\\DomoLabo\\DomoLabo.Droid\\DomoLabo.Droid.csproj",
+  "projectFilePath": "C:\\Mes Dossiers\\Ynov Campus\\Ydays\\B2\\Domolabo\\test\\DomoLabo\\DomoLabo\\DomoLabo.Droid\\DomoLabo.Droid.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\macel\\.nuget\\packages\\xamarin.android.arch.core.common\\1.1.1.3\\xamarin.android.arch.core.common.1.1.1.3.nupkg.sha512",
     "C:\\Users\\macel\\.nuget\\packages\\xamarin.android.arch.core.runtime\\1.1.1.3\\xamarin.android.arch.core.runtime.1.1.1.3.nupkg.sha512",
