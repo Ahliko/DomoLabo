@@ -9,7 +9,7 @@
   <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="28" />
   <uses-permission android:name="android.permission.INTERNET" />
   <application android:label="DomoLabo.Droid" android:name="android.app.Application" android:allowBackup="true" android:debuggable="true" android:extractNativeLibs="true">
-    <activity android:configChanges="orientation|screenSize" android:label="DomoLabo" android:theme="@style/MainTheme" android:name="crc647ec2c39c3e5ab1b8.MainActivity">
+    <activity android:configChanges="orientation|screenSize" android:label="DomoLabo" android:screenOrientation="portrait" android:theme="@style/MainTheme" android:name="crc647ec2c39c3e5ab1b8.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />

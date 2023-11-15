@@ -34,32 +34,110 @@
                 TextColor="DarkGray">
                 Favorite devices
             </Label>
-            <StackLayout Orientation="Horizontal">
-                <StackLayout Orientation="Vertical">
-                    <Frame
-                        Background="#3B3D51"
-                        CornerRadius="10"
-                        HeightRequest="65"
-                        Margin="2"
-                        Padding="10"
-                        WidthRequest="138">
-                        <StackLayout>
-                            <Label TextColor="White">test</Label>
-                        </StackLayout>
-                    </Frame>
-                    <Frame
-                        Background="#3B3D51"
-                        CornerRadius="10"
-                        HeightRequest="65"
-                        Margin="2"
-                        Padding="10"
-                        WidthRequest="138">
-                        <StackLayout>
-                            <Label TextColor="White">test</Label>
-                        </StackLayout>
-                    </Frame>
+            <ScrollView Orientation="Horizontal">
+                <StackLayout Orientation="Horizontal">
+                    <StackLayout Orientation="Vertical">
+                        <Frame
+                            Background="#3B3D51"
+                            CornerRadius="10"
+                            HeightRequest="65"
+                            Margin="2"
+                            Padding="10"
+                            WidthRequest="138">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <StackLayout Grid.Column="1" VerticalOptions="Center">
+                                    <Label
+                                        FontAttributes="Bold"
+                                        FontSize="12"
+                                        TextColor="White">
+                                        Name
+                                    </Label>
+                                    <Label
+                                        FontSize="8"
+                                        Margin="0,-4"
+                                        TextColor="White">
+                                        Contains
+                                    </Label>
+                                </StackLayout>
+                                <Grid Grid.Column="2" WidthRequest="6">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="6" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+                                    <Frame
+                                        BackgroundColor="Red"
+                                        CornerRadius="5"
+                                        Grid.Row="0" />
+                                </Grid>
+                            </Grid>
+                        </Frame>
+                        <Frame
+                            Background="#3B3D51"
+                            CornerRadius="10"
+                            HeightRequest="65"
+                            Margin="2"
+                            Padding="10"
+                            WidthRequest="138">
+                            <StackLayout>
+                                <Label TextColor="White">test</Label>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical">
+                        <Frame
+                            Background="#3B3D51"
+                            CornerRadius="10"
+                            HeightRequest="65"
+                            Margin="2"
+                            Padding="10"
+                            WidthRequest="138">
+                            <StackLayout>
+                                <Label TextColor="White">test</Label>
+                            </StackLayout>
+                        </Frame>
+                        <Frame
+                            Background="#3B3D51"
+                            CornerRadius="10"
+                            HeightRequest="65"
+                            Margin="2"
+                            Padding="10"
+                            WidthRequest="138">
+                            <StackLayout>
+                                <Label TextColor="White">test</Label>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical">
+                        <Frame
+                            Background="#3B3D51"
+                            CornerRadius="10"
+                            HeightRequest="65"
+                            Margin="2"
+                            Padding="10"
+                            WidthRequest="138">
+                            <StackLayout>
+                                <Label TextColor="White">test</Label>
+                            </StackLayout>
+                        </Frame>
+                        <Frame
+                            Background="#3B3D51"
+                            CornerRadius="10"
+                            HeightRequest="65"
+                            Margin="2"
+                            Padding="10"
+                            WidthRequest="138">
+                            <StackLayout>
+                                <Label TextColor="White">test</Label>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
                 </StackLayout>
-            </StackLayout>
+            </ScrollView>
         </StackLayout>
 
 
@@ -70,30 +148,99 @@
                 TextColor="DarkGray">
                 Devices groups
             </Label>
-            <StackLayout Orientation="Horizontal">
-                <Frame
-                    Background="#3B3D51"
-                    CornerRadius="10"
-                    HeightRequest="160"
-                    Margin="2"
-                    Padding="10"
-                    WidthRequest="138">
-                    <StackLayout>
-                        <Label TextColor="White">test</Label>
-                    </StackLayout>
-                </Frame>
-                <Frame
-                    Background="#3B3D51"
-                    CornerRadius="10"
-                    HeightRequest="160"
-                    Margin="2"
-                    Padding="10"
-                    WidthRequest="138">
-                    <StackLayout>
-                        <Label TextColor="White">test</Label>
-                    </StackLayout>
-                </Frame>
-            </StackLayout>
+            <ScrollView Orientation="Horizontal">
+                <StackLayout Orientation="Horizontal">
+                    <Frame
+                        Background="#3B3D51"
+                        CornerRadius="10"
+                        HeightRequest="160"
+                        Margin="2"
+                        Padding="10"
+                        WidthRequest="138">
+                        <StackLayout>
+                            <Label TextColor="White">test</Label>
+                        </StackLayout>
+                    </Frame>
+                    <Frame
+                        Background="#3B3D51"
+                        CornerRadius="10"
+                        HeightRequest="160"
+                        Margin="2"
+                        Padding="10"
+                        WidthRequest="138">
+                        <StackLayout>
+                            <Label TextColor="White">test</Label>
+                        </StackLayout>
+                    </Frame>
+                    <Frame
+                        Background="#3B3D51"
+                        CornerRadius="10"
+                        HeightRequest="160"
+                        Margin="2"
+                        Padding="10"
+                        WidthRequest="138">
+                        <StackLayout>
+                            <Label TextColor="White">test</Label>
+                        </StackLayout>
+                    </Frame>
+                    <Frame
+                        Background="#3B3D51"
+                        CornerRadius="10"
+                        HeightRequest="160"
+                        Margin="2"
+                        Padding="10"
+                        WidthRequest="138">
+                        <StackLayout>
+                            <Label TextColor="White">test</Label>
+                        </StackLayout>
+                    </Frame>
+                    <Frame
+                        Background="#3B3D51"
+                        CornerRadius="10"
+                        HeightRequest="160"
+                        Margin="2"
+                        Padding="10"
+                        WidthRequest="138">
+                        <StackLayout>
+                            <Label TextColor="White">test</Label>
+                        </StackLayout>
+                    </Frame>
+                    <Frame
+                        Background="#3B3D51"
+                        CornerRadius="10"
+                        HeightRequest="160"
+                        Margin="2"
+                        Padding="10"
+                        WidthRequest="138">
+                        <StackLayout>
+                            <Label TextColor="White">test</Label>
+                        </StackLayout>
+                    </Frame>
+                    <Frame
+                        Background="#3B3D51"
+                        CornerRadius="10"
+                        HeightRequest="160"
+                        Margin="2"
+                        Padding="10"
+                        WidthRequest="138">
+                        <StackLayout>
+                            <Label TextColor="White">test</Label>
+                        </StackLayout>
+                    </Frame>
+                    <Frame
+                        Background="#3B3D51"
+                        CornerRadius="10"
+                        HeightRequest="160"
+                        Margin="2"
+                        Padding="10"
+                        WidthRequest="138">
+                        <StackLayout>
+                            <Label TextColor="White">test</Label>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+            </ScrollView>
+
         </StackLayout>
     </StackLayout>
 
