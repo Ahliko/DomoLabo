@@ -1,4 +1,4 @@
-# [Schematics](doc-esp32-pinout.webp)
+# Schematics
 
 > `KiCad libs :` https://github.com/rayvburn/KiCad/tree/master
 
@@ -11,4 +11,3 @@
 [KiKad file](DTH11/DTH11.kicad_sch)
 
 ##
-
