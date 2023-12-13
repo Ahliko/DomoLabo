@@ -12,4 +12,8 @@
 
 [KiKad file](DTH11/DTH11.kicad_sch)
 
-##
+## FAN
+
+[PDF file](FAN/fan.pdf)
+
+[KiKad file](FAN/fan.kicad_sch)
