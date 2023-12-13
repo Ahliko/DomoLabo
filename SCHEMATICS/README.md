@@ -1,6 +1,7 @@
 # Schematics
 
 > `KiCad libs :` https://github.com/rayvburn/KiCad/tree/master
+
 > `Card pinout :` [here](doc-esp32-pinout.webp)
 
 
