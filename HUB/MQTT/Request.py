@@ -40,6 +40,8 @@ def processRequest(rqt:str,author:str)->tuple[bool,str,list[str]]:
                     return (True, getRequest_HubDisponible(), [author])
                 case "add":
                     return (True, "hola", [re['content']['topic']])
+                case "data":
+                     return (True, "Hola Hola me vois tu !", [author]) 
                 case _:
                     return (False,"", [])
     except Exception as e:
