@@ -41,7 +41,13 @@ def processRequest(rqt:str,author:str)->tuple[bool,str,list[str]]:
                 case "add":
                     return (True, "hola", [re['content']['topic']])
                 case "data":
-                     return (True, "Hola Hola me vois tu !", [author]) 
+                     return (True, json.dumps({
+            "identity":getIdentity(),
+            "content":{
+                "type":"hola",
+                "response":"girl",
+            }
+        }), [author]) 
                 case _:
                     return (False,"", [])
     except Exception as e:
