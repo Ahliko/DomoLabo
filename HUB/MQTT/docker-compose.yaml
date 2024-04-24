@@ -1,0 +1,8 @@
+version: '3.1'
+
+services:
+    hub:
+        build: .
+        container_name: monit
+          #restart: always
+        user: '5000'
