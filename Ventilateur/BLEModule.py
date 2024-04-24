@@ -2,6 +2,7 @@ from time import sleep_ms
 import ubluetooth
 import network
 import uasyncio as asyncio
+from Ventilo import Ventilo
 
 wlan_sta = network.WLAN(network.STA_IF)
 wlan_sta.active(True)
@@ -24,7 +25,7 @@ class BLE:
         self.ble.active(True)
         self.connect = False
 
-        self.d = "mytopicObject"
+        self.d = Ventilo.topic
 
         self.disconnected()
         self.ble.irq(self.ble_irq)
@@ -54,12 +55,17 @@ class BLE:
             '''New message received'''
             buffer = self.ble.gatts_read(self.rx1)
             self.ble.gatts_write(self.rx1, bytearray())
-            message = buffer.decode('UTF-8').strip()
-            print("Name : ",message)
+
+            
+            if buffer.decode('UTF-8').strip() != "" :
+                Ventilo.wifi_ssid = buffer.decode('UTF-8').strip()
+
             buffer = self.ble.gatts_read(self.rx2)
             self.ble.gatts_write(self.rx2, bytearray())
-            message = buffer.decode('UTF-8').strip()
-            print("Password : ",message)
+
+            
+            if buffer.decode('UTF-8').strip() != "" :
+                Ventilo.wifi_password = buffer.decode('UTF-8').strip()
 
     def register(self):
 
@@ -88,18 +94,3 @@ class BLE:
     def advertiser(self):
         name = bytes(self.name, 'UTF-8')
         self.ble.gap_advertise(50000, bytearray(b'\x02\x01\x02') + bytearray([len(name) + 1, 0x09]) + name)
-
-
-async def main():
-    ble = BLE("DL Object")
-
-    while not ble.connect:
-        pass
-
-    while ble.connect:
-        pass
-
-
-# Run the main coroutine
-loop = asyncio.get_event_loop()
-loop.run_until_complete(main())
