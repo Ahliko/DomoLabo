@@ -13,7 +13,9 @@ class BLE:
     def __init__(self, name):
 
         self.service_uuid = "3a13c4ec-4e06-49a2-8fa2-e189f0a9364a"
-        self.characteristic_uuid = "fd3b1289-4226-41fa-abe4-d9b6066a5b20"
+        self.characteristic_topic_uuid = "fd3b1289-4226-41fa-abe4-d9b6066a5b20"
+        self.characteristic_wifiname_uuid = "6716880a-6831-4689-8958-94e5a15a70d6"
+        self.characteristic_wifipassword_uuid = "3135cb97-c63b-49fd-a72c-29e2c347f647"
         self.description_uuid = "d9f4578a-ce79-47ec-aab8-c1c0c4fac959"
 
         self.name = "0df0032e|" + name
@@ -50,23 +52,31 @@ class BLE:
 
         elif event == 3:
             '''New message received'''
-            buffer = self.ble.gatts_read(self.rx)
+            buffer = self.ble.gatts_read(self.rx1)
+            self.ble.gatts_write(self.rx1, bytearray())
             message = buffer.decode('UTF-8').strip()
-            print(message)
+            print("Name : ",message)
+            buffer = self.ble.gatts_read(self.rx2)
+            self.ble.gatts_write(self.rx2, bytearray())
+            message = buffer.decode('UTF-8').strip()
+            print("Password : ",message)
 
     def register(self):
 
         ble_service_uuid = ubluetooth.UUID(self.service_uuid)
 
-        ble_characteristic = (ubluetooth.UUID(self.characteristic_uuid), ubluetooth.FLAG_WRITE | ubluetooth.FLAG_READ)
+        ble_characteristic_topic = (ubluetooth.UUID(self.characteristic_topic_uuid), ubluetooth.FLAG_WRITE | ubluetooth.FLAG_READ)
 
-        ble_service1 = (ble_service_uuid, (ble_characteristic,))
+        ble_characteristic_wifiname = (ubluetooth.UUID(self.characteristic_wifiname_uuid), ubluetooth.FLAG_WRITE | ubluetooth.FLAG_READ)
+        ble_characteristic_wifipassword = (ubluetooth.UUID(self.characteristic_wifipassword_uuid), ubluetooth.FLAG_WRITE | ubluetooth.FLAG_READ)
+        
+        ble_service1 = (ble_service_uuid, (ble_characteristic_topic,ble_characteristic_wifiname, ble_characteristic_wifipassword))
 
         ble_services = (ble_service1,)
 
 
-        ((self.t,),) = self.ble.gatts_register_services(ble_services)
-        self.ble.gatts_write(self.t, self.d.encode())
+        ((self.t1, self.rx1, self.rx2,),) = self.ble.gatts_register_services(ble_services)
+        self.ble.gatts_write(self.t1, self.d.encode())
 
 
 
@@ -77,7 +87,7 @@ class BLE:
 
     def advertiser(self):
         name = bytes(self.name, 'UTF-8')
-        self.ble.gap_advertise(675, bytearray(b'\x02\x01\x02') + bytearray([len(name) + 1, 0x09]) + name)
+        self.ble.gap_advertise(50000, bytearray(b'\x02\x01\x02') + bytearray([len(name) + 1, 0x09]) + name)
 
 
 async def main():
