@@ -1,0 +1,14 @@
+[Unit]
+Description=Docker container
+BindsTo=docker.service
+After=docker.service
+
+[Service]
+Environment=NAME=%N
+Restart=on-failure
+type=simple
+RemainAfterExit=yes
+ExecStart=/usr/bin/docker compose -f /home/py/DomoLabo/HUB/MQTT/docker-compose.yaml up -d
+ExecStop=/usr/bin/docker compose -f /home/py/DomoLabo/HUB/MQTT/docker-compose.yaml down
+[Install]
+WantedBy=multi-user.target
