@@ -12,7 +12,7 @@ class Motor:
         self.speed.freq(self.vitesse)
 
     def start(self, vitesse):
-        self.pin1.duty(int((vitesse / 100) * 1024))
+        self.speed.duty(int((vitesse / 100) * 1024))
         self.pin2.value(0)
 
     def stopBlock(self):
