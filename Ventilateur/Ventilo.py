@@ -43,7 +43,8 @@ class Ventilo:
                 "mac": self.wlan_mac
             },
             "content": {
-                "type": "data",
+                "type": "response",
+                "what":"data",
                 "data": dumps(self.data_str)
             }
         }
@@ -75,8 +76,9 @@ class Ventilo:
             self.client.publish(topic, dumps(self.connection_response))
 
         elif message["content"]["type"] == "data":
+            self.data_str = message["content"]["data"]
             self.client.publish(topic, dumps(self.data))
-            # Modification de l'état du ventilateur
+            self.motor.start(int(self.data_str["value"]))
 
     def main(self):
         while True:

@@ -51,20 +51,38 @@ def processRequest(rqt:str,author:str, crud)->tuple[bool,str,list[str]]:
                     crud.insert_db("app", "topic", author)
                     return (True, getRequest_HubDisponible(), [author])
                 case "add":
-                    return (True, "hola", [re['content']['topic']])
+                    return (True, getRequest_ObjData(), [re['content']['topic']])
                 case "data":
                      return (True, json.dumps({
-            "identity":getIdentity(),
-            "content":{
-                "type":"hola",
-                "response":"girl",
-            }
-        }), [author]) 
+                        "identity":getIdentity(),
+                        "content":{
+                            "type":"data",
+                            "data":re['content']['data'],
+                        }
+                    }), [re['content']['topic']]) 
                 case "response":
                     match re['content']['what']:
                         case "add":
                             Object.OBJECTS[re['content']['topic']]= json.dump(re['content']['data'])
                             crud.insert_db("object", "topic", re['content']['topic'])
+                            return (True, json.dumps({
+                                 "identity":getIdentity(),
+                                 "content":{
+                                    "type":"response",
+                                    "what":"add",
+                                    "response":"ok",
+                                    "identity":re['identity'],
+                                    "data": re["data"],
+                                 }
+                            }), Application.APPLICATIONS)
+                        case "data":
+                            return (True, json.dumps({
+                                "identity":getIdentity(),
+                                "content":{
+                                    "type":"data",
+                                    "data":re['content']['data'],
+                                }
+                            }), Application.APPLICATIONS)
                 case _:
                     return (False,"", [])
     except Exception as e:
