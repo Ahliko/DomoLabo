@@ -73,15 +73,15 @@ class Ventilo:
         message = loads(message)
         print(message)
         
-        #if self.identity != message["identity"]:
-        #    if message["content"]["type"] == "add":
-        #        self.client.publish(topic, dumps(self.connection_response))
+        if self.identity != message["identity"]:
+            if message["content"]["type"] == "add":
+                self.client.publish(topic, dumps(self.connection_response))
 
-        #    elif message["content"]["type"] == "data":
-        #        print("je recois de la data")
-        #        self.data_str = loads(message["content"]["data"])
-        #        self.client.publish(topic, dumps(self.data))
-        #        self.motor.start(int(self.data_str["value"]))
+            elif message["content"]["type"] == "data":
+                print("je recois de la data")
+                self.data_str = loads(message["content"]["data"])
+                self.client.publish(topic, dumps(self.data))
+                self.motor.start(int(self.data_str["value"]))
 
     def main(self):
         while True:
