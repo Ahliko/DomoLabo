@@ -50,8 +50,8 @@ Domolabo consists of three main components:
 
 ## 💻 Installation :
 
-➜ [Install the Hub](./Hub/README.md)  <br>
-➜ [Install the Connected objet](./Connected_objects/README.md) <br>
+➜ [Install the Hub](./Hub/)  <br>
+➜ [Install the Connected objet](./Connected_objects) <br>
 ➜ [Install the App](https://github.com/Tenlutshy/DomoLaboApp)
 
 
