@@ -13,6 +13,9 @@ class Motor:
         self.speed.duty(int((vitesse / 100) * 1023))
         self.pin1.value(1)
         self.pin2.value(0)
+        if vitesse == 0 :
+            self.stopBlock()
+
 
     def stopBlock(self):
         print("sblock")
