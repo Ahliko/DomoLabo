@@ -34,6 +34,4 @@ The entire object can be printed in 3d from the files present in this folder :
 
 ## 💻 Installation :
 
-
-
 5. Enjoy !😉
