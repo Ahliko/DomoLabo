@@ -44,7 +44,7 @@ Domolabo aims to make the smart home accessible, intuitive, and customizable for
 Domolabo consists of three main components:
 
 1. **Connected Devices**: IoT devices integrating various sensors and actuators.
-2. **Central Hub**: Central server using protocols such as [BLE](https://en.wikipedia.org/wiki/Bluetooth_Low_Energy), [MQTT](https://fr.wikipedia.org/wiki/MQTT) and [WiFi](https://fr.wikipedia.org/wiki/Wi-Fi) to communicate with connected devices.
+2. **Central Hub**: Central server using protocol [MQTT](https://fr.wikipedia.org/wiki/MQTT) to communicate with connected devices.
 3. **Mobile Application**: User interface to control and monitor devices via the hub.
 
 
@@ -63,6 +63,4 @@ Domolabo consists of three main components:
 
 3. Lunch the App
 
-4. Add the object on the app
-
-5. Enjoy ! 😉
+4. Enjoy ! 😉

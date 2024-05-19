@@ -20,7 +20,7 @@ class Ventilo:
 
         self.identity = {
             "name": "ventilo",
-            "mac": str(self.wlan_mac)
+            "mac": self.wlan_mac
         }
         
         self.data_str = {
@@ -38,10 +38,7 @@ class Ventilo:
         }
 
         self.data = {
-            "identity": {
-                "name": "ventilo",
-                "mac": self.wlan_mac
-            },
+            "identity": self.identity,
             "content": {
                 "type": "response",
                 "what":"data",
@@ -78,8 +75,11 @@ class Ventilo:
                 self.client.publish(topic, dumps(self.connection_response))
 
             elif message["content"]["type"] == "data":
-                print("je recois de la data")
                 self.data_str = loads(message["content"]["data"])
+                
+                self.data["content"]["data"] = self.data_str
+                print(int(self.data_str["value"]))
+                print(dumps(self.data))
                 self.client.publish(topic, dumps(self.data))
                 self.motor.start(int(self.data_str["value"]))
 
@@ -90,4 +90,3 @@ class Ventilo:
                 sleep(0.1)
             except Exception as e:
                 print("Exception occurred:", e)
-

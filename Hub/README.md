@@ -1,4 +1,4 @@
-# Connected objects 
+# Hub
 
 ## 📌 Table of Contents :
 
@@ -13,7 +13,7 @@ IV. [Schématic](#💻-installation)
 V. [Installation and Assembly](#💻-installation) 
 
 ## 📋 Presentation :
-Currently, Domolabo includes one connected device: a mini fan. <br>This mini fan can be controlled via the central hub and the mobile application, allowing users to adjust the fan's activation and speed.
+The hub using the MQTT protocol enables the connection and control of various smart devices, such as a connected fan, via a dedicated mobile app. With its protocol, the hub ensures fast and reliable communication between devices and the app, allowing real-time commands.
 
 ## ⚙️ Equipment required :
 
