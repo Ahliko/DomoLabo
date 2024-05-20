@@ -2,7 +2,7 @@ from time import sleep_ms
 import ubluetooth
 import network
 import uasyncio as asyncio
-from ventilo import Ventilo
+from Ventilo import Ventilo
 
 wlan_sta = network.WLAN(network.STA_IF)
 wlan_sta.active(True)

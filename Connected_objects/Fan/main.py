@@ -1,6 +1,6 @@
 from simple import MQTTClient
 from BLEModule import BLE
-from ventilo import Ventilo
+from Ventilo import Ventilo
 import uasyncio as asyncio
 
 async def main():
