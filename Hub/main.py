@@ -20,7 +20,6 @@ def connect_mqtt() -> mqtt_client:
 
 
 def publish(client, message, topic):
-    print("mesage dans le main en fait" + message)
     result = client.publish(str(topic), message)
     status = result[0]
     if status == 0:
@@ -45,9 +44,7 @@ def subscribe(client: mqtt_client, crud):
                         pass
                     finally:
                         MQTTConfig.currentSubscription.append(to)
-                
-                print("reponse la princesse : " + response)
-                print(type(response))
+
                 publish(client, response, to)
 
                 if "disponible" in response:

@@ -76,7 +76,6 @@ def processRequest(rqt:str,author:str, crud)->tuple[bool,str,list[str]]:
                                  }
                             }), Application.APPLICATIONS)
                         case "data":
-                            print(re["content"]["data"])
                             return (True, json.dumps({
                                 "identity":getIdentity(),
                                 "content":{
