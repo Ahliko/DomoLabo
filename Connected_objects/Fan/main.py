@@ -2,9 +2,10 @@ from simple import MQTTClient
 from BLEModule import BLE
 from ventilo import Ventilo
 import uasyncio as asyncio
+import machine
 from machine import Pin
 
-button = Pin(14, Pin.IN, Pin.PULL_UP)
+button = machine.Pin(14, machine.Pin.IN, machine.Pin.PULL_UP)
 
 async def main():
     
