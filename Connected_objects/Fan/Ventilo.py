@@ -66,9 +66,9 @@ class Ventilo:
         self.client.subscribe(Ventilo.topic)
 
     def on_message(self, topic, message):
-        print("Message reçu sur le topic {}: {}".format(topic, message))
+        #print("Message reçu sur le topic {}: {}".format(topic, message))
         message = loads(message)
-        print(message)
+        #print(message)
         
         if self.identity != message["identity"]:
             if message["content"]["type"] == "add":
@@ -76,10 +76,7 @@ class Ventilo:
 
             elif message["content"]["type"] == "data":
                 self.data_str = loads(message["content"]["data"])
-                
                 self.data["content"]["data"] = self.data_str
-                print(int(self.data_str["value"]))
-                print(dumps(self.data))
                 self.client.publish(topic, dumps(self.data))
                 self.motor.start(int(self.data_str["value"]))
 
