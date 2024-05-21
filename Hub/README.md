@@ -30,6 +30,8 @@ The entire object can be printed from the files present in the [3D Models](/Hub/
 
 ## 💡 IV - Schematics :
 
+You can find the electrical schematics in the [schematics folder](/Hub/SCH/)
+
 ## 💻 V - Installation :
 
 ### Prerequisites :
