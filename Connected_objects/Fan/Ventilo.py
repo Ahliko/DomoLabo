@@ -16,7 +16,7 @@ class Ventilo:
     def __init__(self):
         self.wlan_sta = WLAN(STA_IF)
         self.wlan_sta.active(True)
-        self.wlan_mac = self.wlan_sta.config('mac')
+        self.wlan_mac = str(self.wlan_sta.config('mac'))
 
         self.identity = {
             "name": "ventilo",
@@ -90,3 +90,4 @@ class Ventilo:
                 sleep(0.1)
             except Exception as e:
                 print("Exception occurred:", e)
+
