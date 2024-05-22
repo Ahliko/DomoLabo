@@ -37,7 +37,7 @@ The entire object can be printed in 3d from the files present in this folder :
 
 ## 💡 Schématic :
 
-You can find the electrical schematics in the [schematics folder](/SCH)
+You can find the electrical schematics in the [schematics folder](/Connected_objects/Fan/SCH/)
 
 ## 💻 Installation :
 
