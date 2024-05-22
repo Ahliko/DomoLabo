@@ -2,20 +2,20 @@
 
 ## 📌 Table of Contents :
 
-I. [Presentation](#📋-presentation)
+I. [Presentation](#📋-i---presentation)
 
-II. [Equipment required](#⚙️-system-architecture)
+II. [Equipment required](#⚙️-ii---equipment-required)
 
-III. [3D models](#💻-installation) 
+III. [3D models](#🔰-iii---3d-models) 
 
-IV. [Schématic](#💻-installation) 
+IV. [Schematics](#💡-iv--schematics) 
 
-V. [Installation and Assembly](#💻-installation) 
+V. [Installation](#💻-v---installation) 
 
-## 📋 Presentation :
+## 📋 I - Presentation :
 The hub using the MQTT protocol enables the connection and control of various smart devices, such as a connected fan, via a dedicated mobile app. With its protocol, the hub ensures fast and reliable communication between devices and the app, allowing real-time commands.
 
-## ⚙️ Equipment required :
+## ⚙️ II - Equipment required :
 
 - [Raspberry Pi](https://lc.cx/UVVqhr)
 - [Ethernet cable](https://lc.cx/8I6v4b)
@@ -23,35 +23,34 @@ The hub using the MQTT protocol enables the connection and control of various sm
 - [AC USB adapter](https://lc.cx/akJVcI)
 
 
-## 🔰 3D models :
-You can view the current model here : https://a360.co/48swrxa
+## 🔰 III - 3D models :
+You can view the current model of the hub here : https://a360.co/48swrxa
 
-The entire object can be printed in 3d from the files present in this folder :
+The entire object can be printed from the files present in the [3D Models](/Hub/3D_Models/) folder in the repo.
 
-[3D Models](/Hub/3D_Models/)
+## 💡 IV - Schematics :
 
-## 💡 Schématic :
+You can find the electrical schematics in the [schematics folder](/Hub/SCH/)
 
-## 💻 Installation :
+## 💻 V - Installation :
 
 ### Prerequisites :
 
-To begin, follow this guide to install your OS in the Raspberry Pi :
-[Getting Started](https://www.raspberrypi.com/documentation/computers/getting-started.html)
+To begin, follow [this guide](https://www.raspberrypi.com/documentation/computers/getting-started.html) to install your OS in the Raspberry Pi.
 
-- Use the Raspberry os lite 64-bits version.
-- To connect the Raspberry to internet, use the Ethernet câble.
+- Use the Raspberry OS Lite 64-bits version.
+- To connect the Raspberry to internet, use the Ethernet cable.
 
-After that, follow the instruction below :
+After that, follow the instructions below :
 
 ```bash
 sudo apt update -y && sudo apt upgrade -y
 sudo apt install git -y 
 ```
 
-Please follow the Docker docs to install docker on the RPI : [Doc](https://docs.docker.com/engine/install/debian/)
+Please follow the Docker docs to [install docker on the RPI](https://docs.docker.com/engine/install/debian/).
 
-Don't forget to add your user to the docker's group :
+⚠️ Don't forget to add your user to the docker group :
 ```bash
 sudo usermod -aG docker $(whoami)
 sudo systemctl enable --now docker.socket
@@ -59,7 +58,7 @@ sudo systemctl enable --now docker.socket
 
 ### Install the hub :
 
-Clone this repo : [https://github.com/Wanaps/DomoLabo](https://github.com/Wanaps/DomoLabo)
+Clone the [DomoLabo repo](https://github.com/Wanaps/DomoLabo) into the RPI.
 
 ```bash
 git clone https://github.com/Wanaps/DomoLabo
@@ -67,5 +66,4 @@ cd DomoLabo/Hub
 docker compose up -d
 ```
 
-
-5. Enjoy !😉
+Enjoy your own HUB at home! 😉

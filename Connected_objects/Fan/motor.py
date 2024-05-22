@@ -12,7 +12,6 @@ class Motor:
         self.stopBlock()
 
     def start(self, vitesse):
-        print("start")
         self.speed.duty(int((vitesse / 100) * 1023))
         self.pin1.value(1)
         self.pin2.value(0)
@@ -22,13 +21,8 @@ class Motor:
 
     def stopBlock(self):
         print("sblock")
-        self.speed.duty(int((100 / 100) * 1023))
+        self.speed.duty(int((0 / 100) * 1023))
         self.pin1.value(1)
         self.pin2.value(1)
 
-    def stopLibre(self):
-        print("slibre")
-        self.speed.duty(int((0 / 100) * 1023))
-        self.pin1.value(0)
-        self.pin2.value(0)
 
