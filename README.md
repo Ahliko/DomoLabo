@@ -8,13 +8,15 @@ I. [Badges](#🎯-badges)
 
 II. [License](#📑-license)
 
-III. [Presentation](#📋-presentation)
+III. [Project presentation](#🎥-project-presentation)
 
-IV. [System Architecture](#⚙️-system-architecture)
+IV. [Description](#📋-description)
 
-V. [Installation](#💻-installation) 
+V. [System Architecture](#⚙️-system-architecture)
 
-VI. [use]()
+VI. [Installation](#💻-installation) 
+
+VII. [use]()
 
 
 ## 🎯 Badges :
@@ -35,7 +37,13 @@ VI. [use]()
 [MIT](https://choosealicense.com/licenses/mit/)
 
 
-## 📋 Presentation :
+## 🎥 Project presentation :
+
+[Présentation](./Presentation_DomoLabo.pptx)
+
+
+## 📋 Description :
+
 Domolabo is an open source project aimed at creating a comprehensive home automation system from scratch. This project encompasses the design of connected devices, a central hub to manage these devices, and a mobile application to control and monitor the entire system. <br>
 Domolabo aims to make the smart home accessible, intuitive, and customizable for all users.
 
