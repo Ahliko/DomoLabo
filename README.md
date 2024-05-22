@@ -27,8 +27,8 @@ VII. [use]()
 [![Xamarin logo](https://img.shields.io/badge/Framework-Xamarin-pink)](https://learn.microsoft.com/fr-fr/previous-versions/xamarin/get-started/what-is-xamarin)
 
 
-[![BLE logo](https://img.shields.io/badge/Protocole-BLE-6495ed)](https://developer.android.com/develop/connectivity/bluetooth/ble/ble-overview?hl=fr)
-[![MQTT logo](https://img.shields.io/badge/Protocole-MQTT-8c1c1c)](https://mqtt.org)
+[![BLE logo](https://img.shields.io/badge/Protocol-BLE-6495ed)](https://developer.android.com/develop/connectivity/bluetooth/ble/ble-overview?hl=fr)
+[![MQTT logo](https://img.shields.io/badge/Protocol-MQTT-8c1c1c)](https://mqtt.org)
 
 
 [![Docker logo](https://img.shields.io/badge/Container-Docker-00008B)](https://www.docker.com)
