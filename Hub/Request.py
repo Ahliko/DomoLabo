@@ -4,6 +4,8 @@ from Objects import Object
 from uuid import getnode as get_mac
 import json
 
+haveResponse = False
+
 
 def getIdentity():
     return {
@@ -41,6 +43,7 @@ def getRequest_ObjData():
     })
 
 def processRequest(rqt:str,author:str, crud)->tuple[bool,str,list[str]]:
+    global haveResponse
     try:
         re = json.loads(rqt)
         if re["identity"] != getIdentity():
@@ -49,9 +52,9 @@ def processRequest(rqt:str,author:str, crud)->tuple[bool,str,list[str]]:
                     app = Application(identity=re['identity'], topic=author)
                     Application.APPLICATIONS.append(app)
                     crud.insert_db("app", "topic", author)
-                    return (True, getRequest_HubDisponible(), [author])
+                    return (True, getRequest_HubDisponible(), [author], False)
                 case "add":
-                    return (True, getRequest_ObjData(), [re['content']['topic']])
+                    return (True, getRequest_ObjData(), [re['content']['topic']], True)  # Dire que l'on veut attendre une reponse
                 case "data":
                      return (True, json.dumps({
                         "identity":getIdentity(),
@@ -59,33 +62,35 @@ def processRequest(rqt:str,author:str, crud)->tuple[bool,str,list[str]]:
                             "type":"data",
                             "data":re['content']['data'],
                         }
-                    }), [re['content']['topic']]) 
+                    }), [re['content']['topic']], False) 
                 case "response":
+                    haveResponse = True
                     match re['content']['what']:
                         case "add":
-                            Object.OBJECTS[re['content']['topic']]= json.dump(re['content']['data'])
-                            crud.insert_db("object", "topic", re['content']['topic'])
+                            Object.OBJECTS[author]= json.dumps(re['content']['data'])
+                            crud.insert_db("object", "topic", author)
+                            re["content"]["data"]["topic"] = author
                             return (True, json.dumps({
                                  "identity":getIdentity(),
                                  "content":{
                                     "type":"response",
                                     "what":"add",
                                     "response":"ok",
-                                    "identity":re['identity'],
-                                    "data": re["data"],
+                                    "identity":json.dumps(re['identity']),
+                                    "data": json.dumps(re["content"]["data"]),
                                  }
-                            }), Application.APPLICATIONS)
+                            }), [x.topic if type(x) == Application else str(x[0]) for x in Application.APPLICATIONS], False)
                         case "data":
                             return (True, json.dumps({
                                 "identity":getIdentity(),
                                 "content":{
                                     "type":"data",
-                                    "data":re['content']['data'],
+                                    "data":json.dumps(re['content']['data']),
                                 }
-                            }), Application.APPLICATIONS)
+                            }), [x.topic if type(x) == Application else str(x[0]) for x in Application.APPLICATIONS], False)
                 case _:
-                    return (False,"", [])
+                    return (False,"", [], False)
     except Exception as e:
         print(e)
-        return (False,"", [])
-    return (False,"", [])
+        return (False,"", [],False)
+    return (False,"", [],False)

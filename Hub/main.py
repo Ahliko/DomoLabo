@@ -1,5 +1,6 @@
 from Application import Application
 import Request
+import time
 import MQTTConfig
 import json
 from paho.mqtt import client as mqtt_client
@@ -32,23 +33,25 @@ def publish(client, message, topic):
 def subscribe(client: mqtt_client, crud):
     def on_message(client, userdata, msg):
         request = str(msg.payload.decode("utf-8"))
-        print(f"{msg.topic}  |    {request}")
-        needResponse, response, dest = Request.processRequest(request, msg.topic, crud)
-        print(needResponse)
-        if needResponse:
-            for to in dest:
-                if to not in MQTTConfig.currentSubscription:
+        reply, response, dest, needResponse = Request.processRequest(request, msg.topic, crud)
+        print(msg.topic)
+        if reply:
+            unique_dest = set(dest)
+
+            for ta in unique_dest:
+                if ta not in MQTTConfig.currentSubscription:
                     try:
-                        client.subscribe(to)
+                        client.subscribe(ta)
                     except:
                         pass
                     finally:
-                        MQTTConfig.currentSubscription.append(to)
-
-                publish(client, response, to)
+                        MQTTConfig.currentSubscription.append(ta)
+                
+                publish(client, response, ta)
+                        
 
                 if "disponible" in response:
-                    publish(client, Request.getRequest_HubOK(), to)
+                    publish(client, Request.getRequest_HubOK(), ta)
               
     try:
         client.subscribe(MQTTConfig.topicApp)

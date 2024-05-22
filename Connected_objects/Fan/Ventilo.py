@@ -4,11 +4,16 @@ from umqtt.simple import MQTTClient
 from motor import Motor
 from time import sleep
 from json import dumps, loads
+import urandom
+
+def generate_uid(length=8):
+    uid = ''.join('{:02x}'.format(urandom.getrandbits(8)) for _ in range(length))
+    return uid
 
 class Ventilo:
     broker_address = "test.mosquitto.org"
     client_id = "esp32"
-    topic = "1234"
+    topic = generate_uid()
 
     wifi_ssid = False
     wifi_password = False
