@@ -37,6 +37,8 @@ The entire object can be printed in 3d from the files present in this folder :
 
 ## 💡 Schématic :
 
+You can find the electrical schematics in the [schematics folder](/Fan/SCH)
+
 ## 💻 Installation :
 
 1. Put the code on the Esp32 (you can use [rshell](https://micropython.fr/05.outils/terminal_serie/rshell/))
